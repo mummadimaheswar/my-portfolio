@@ -1,118 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MUMMADI MAHESWAR REDDY Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
-  <script src="script.js" defer></script>
+  <title>Maheswar's Portfolio</title>
+  <link rel="stylesheet" href="advanced-portfolio.css">
 </head>
+
 <body>
   <div class="home-container">
-    <nav class="navbar advanced-navbar">
-      <h1 class="logo">MAHESWAR REDDY</h1>
-      <div class="nav-links">
+    <header class="advanced-navbar">
+      <div class="logo">Maheswar</div>
+      <nav class="nav-links">
+        <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#certifications">Certifications</a>
         <a href="#contact">Contact</a>
-        <button class="theme-toggle">🌙 Dark Mode</button>
-      </div>
-    </nav>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle">🌓</button>
+    </header>
 
-    <section class="hero advanced-hero fade-in">
-      <div class="hero-content">
-        <h1 class="hero-title">Mummadi Maheswar Reddy</h1>
-        <p class="hero-subtitle">📧 22b61a66a4@nmrec.edu.in | 📞 +91 6303863875 | 📍 Hyderabad</p>
-        <div class="hero-buttons">
-          <button class="btn-orange">View Projects</button>
-          <button class="btn-outline">Contact Me</button>
-        </div>
+    <section class="advanced-hero">
+      <h1 class="hero-title">AI Developer & Engineer</h1>
+      <p class="hero-subtitle">Passionate about building impactful AI solutions with a strong foundation in ML, CV, and NLP</p>
+      <div class="hero-buttons">
+        <button class="btn-orange">Download CV</button>
+        <button class="btn-outline">Hire Me</button>
       </div>
     </section>
 
-    <section class="gallery advanced-gallery fade-in">
-      <div class="gallery-grid">
-        <img src="/images/ai1.jpg" alt="AI Project 1" class="previewable">
-        <img src="/images/ai2.jpg" alt="AI Project 2" class="previewable">
-        <img src="/images/ai3.jpg" alt="AI Project 3" class="previewable">
-        <img src="/images/ai4.jpg" alt="AI Project 4" class="previewable">
-        <img src="/images/ai5.jpg" alt="AI Project 5" class="previewable">
-        <img src="/images/ai6.jpg" alt="AI Project 6" class="previewable">
-      </div>
-    </section>
-
-    <div class="modal">
-      <span class="close">&times;</span>
-      <img src="" alt="Preview">
-    </div>
-
-    <section class="about advanced-about fade-in">
+    <section id="about" class="advanced-about fade-in">
       <div class="about-image">
-        <img src="/images/deep-learning.jpg" alt="Deep Learning Visualization">
+        <img src="./images/profile.jpg" alt="Maheswar profile">
       </div>
       <div class="about-details">
-        <h2>Intelligent Systems Development</h2>
-        <p>Specializing in building AI-powered intelligent systems to enhance decision-making and automation.</p>
-        <h2>Chatbot Creation</h2>
-        <p>Expertise in developing chatbots for customer guidance, interaction, and support.</p>
-        <h2>Deep Learning Models</h2>
-        <p>Hands-on experience implementing neural networks for image, text, and speech understanding.</p>
+        <h2>About Me</h2>
+        <p>I’m Maheswar Reddy, a final-year BTech student and AI enthusiast. I love applying machine learning to solve real-world problems. I’ve built projects like AI career coaches, image captioning apps, and chatbots. My goal is to join a product-based company and make a difference with intelligent systems.</p>
       </div>
     </section>
 
-    <section class="projects fade-in" id="projects">
+    <section id="projects" class="projects fade-in">
       <h2>Projects</h2>
-      <div class="project-list">
-        <div class="project">
-          <h3>Image Captioning using Gradio</h3>
-          <p>Developed an AI-powered image captioning system with Gradio to generate captions.</p>
-        </div>
-        <div class="project">
-          <h3>Chatbot with Open Source LLMs</h3>
-          <p>Built a chatbot using Hugging Face LLMs integrated with Python NLP pipelines.</p>
-        </div>
-        <div class="project">
-          <h3>Sentiment Analysis</h3>
-          <p>Analyzed sentiments in text to provide insights for customer decision-making.</p>
-        </div>
-        <div class="project">
-          <h3>Emotion Detector</h3>
-          <p>Built a system to detect emotions from text using NLP and deep learning.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="skills fade-in" id="skills">
-      <h2>Technical Skills</h2>
-      <ul class="skills-list">
-        <li><strong>Python</strong> - Primary language for AI & ML development</li>
-        <li><strong>Machine Learning</strong> - Model training, evaluation, and tuning</li>
-        <li><strong>Deep Learning</strong> - CNNs, RNNs, and Transformers</li>
-        <li><strong>NLP</strong> - Chatbots, sentiment analysis, text classification</li>
-        <li><strong>Computer Vision</strong> - Object detection, image analysis</li>
-        <li><strong>Cloud</strong> - Azure, Google Cloud Vertex AI</li>
+      <ul class="project-list">
+        <li class="project">Image Captioning using Generative AI</li>
+        <li class="project">Sentiment Analysis Engine</li>
+        <li class="project">Chatbot for Debtors using Google Sheets & n8n</li>
+        <li class="project">AI Career Coach Chatbot</li>
       </ul>
     </section>
 
-    <section class="certifications fade-in" id="certifications">
+    <section id="skills" class="skills fade-in">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>Python, Java, C++</li>
+        <li>Machine Learning & Deep Learning</li>
+        <li>Natural Language Processing</li>
+        <li>Computer Vision</li>
+        <li>Docker, Azure, n8n</li>
+      </ul>
+    </section>
+
+    <section id="certifications" class="certifications fade-in">
       <h2>Certifications</h2>
       <ul class="certification-list">
-        <li><strong>AI Developer</strong> - IBM, Aug 2024</li>
-        <li><strong>Generative AI with Vertex AI</strong> - Google, Aug 2024</li>
-        <li><strong>NLP</strong> - Microsoft, Jul-Aug 2024</li>
-        <li><strong>Computer Vision</strong> - Microsoft, Jul 2024</li>
-        <li><strong>Azure Machine Learning</strong> - Microsoft, Jul 2024</li>
-        <li><strong>AI on Azure</strong> - Microsoft, Jun 2024</li>
-        <li><strong>AI Essentials</strong> - Google, Jun 2024</li>
-        <li><strong>Python for Data Science</strong> - NPTEL, Jan-Mar 2024</li>
+        <li>IBM AI Engineer – Coursera</li>
+        <li>Prompt Engineering for Developers – OpenAI</li>
+        <li>AI Ethics and Law – Stanford Online</li>
       </ul>
     </section>
 
     <section class="languages fade-in">
-      <h2>Languages Known</h2>
+      <h2>Languages</h2>
       <ul>
         <li>Telugu</li>
         <li>English</li>
@@ -121,12 +81,11 @@
     </section>
 
     <section class="hobbies fade-in">
-      <h2>Hobbies & Interests</h2>
+      <h2>Hobbies</h2>
       <ul>
-        <li>Playing badminton</li>
-        <li>Exploring AI tools and technologies</li>
-        <li>Participating in coding challenges</li>
-        <li>Volunteering in tech communities</li>
+        <li>Building AI tools</li>
+        <li>Designing UI/UX concepts</li>
+        <li>Exploring tech & law</li>
       </ul>
     </section>
 
@@ -134,20 +93,23 @@
       <h2>Locations</h2>
       <div class="location-grid">
         <div class="location">
-          <img src="/images/hyderabad.jpg" alt="Hyderabad">
+          <img src="./images/hyderabad.jpg" alt="Hyderabad">
           <p>Hyderabad, Telangana</p>
         </div>
         <div class="location">
-          <img src="/images/kadapa.jpg" alt="Kadapa">
+          <img src="./images/kadapa.jpg" alt="Kadapa">
           <p>Kadapa, Andhra Pradesh</p>
         </div>
       </div>
     </section>
 
-    <section class="footer-student fade-in">
-      <h2>Student Portfolio</h2>
-      <p>This is a student portfolio created with a focus on AI, ML, and advanced project work. Designed for showcasing skills, certifications, and technical growth.</p>
-    </section>
+    <footer class="footer-student fade-in">
+      <h2>Let’s Build Together</h2>
+      <p>Driven by innovation. Powered by learning. Let’s make AI impactful.</p>
+    </footer>
   </div>
+
+  <script src="advanced-portfolio.js"></script>
 </body>
+
 </html>
