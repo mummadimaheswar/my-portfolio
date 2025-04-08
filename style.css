@@ -1,151 +1,216 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* === Advanced Portfolio CSS === */
 
 body {
+  margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f7f8fa;
-  color: #333;
-  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #222;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode body {
+  background-color: #1e1e1e;
+  color: #eee;
 }
 
 .home-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 40px 20px;
+  padding: 0;
+  margin: 0;
 }
 
-/* Hero Section */
-.hero-section {
-  background-color: #0057b8;
-  color: white;
-  padding: 50px 20px;
-  border-radius: 10px;
-  text-align: center;
-  margin-bottom: 30px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.hero-name {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-
-.hero-contact {
-  font-size: 1.1rem;
-  opacity: 0.9;
-}
-
-/* Section Styling */
-.section {
-  background-color: white;
-  margin-bottom: 25px;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-}
-
-.section-title {
-  font-size: 1.8rem;
-  color: #0057b8;
-  margin-bottom: 15px;
-  border-bottom: 2px solid #e0e0e0;
-  padding-bottom: 6px;
-}
-
-.section-text {
-  font-size: 1.05rem;
-  margin-top: 10px;
-  color: #555;
-}
-
-.section-list {
-  list-style-type: disc;
-  padding-left: 20px;
-  font-size: 1.05rem;
-  color: #444;
-}
-
-.section-list li {
-  margin-bottom: 10px;
-}
-
-/* Portfolio Link */
-.portfolio-link {
-  display: inline-block;
-  background-color: #0057b8;
-  color: white;
-  padding: 12px 24px;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: background-color 0.3s ease;
-  font-weight: bold;
-}
-
-.portfolio-link:hover {
-  background-color: #0043a8;
-}
-/* Navigation bar */
-.navbar {
-  background-color: #f7f7f7;
+/* Navbar */
+.advanced-navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
   padding: 1rem 2rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.dark-mode .advanced-navbar {
+  background-color: #121212;
 }
 
-.navbar h1 {
-  font-size: 1.4rem;
+.logo {
+  font-size: 1.8rem;
   font-weight: bold;
-  color: #333;
-}
-
-.nav-links {
-  display: flex;
-  gap: 1.5rem;
+  color: #f97316;
 }
 
 .nav-links a {
+  margin: 0 1rem;
   text-decoration: none;
-  font-weight: 500;
   color: #333;
-  transition: color 0.2s;
+  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #ff6600;
+  color: #f97316;
 }
 
 .theme-toggle {
-  background: #ff6600;
-  color: #fff;
-  padding: 0.4rem 0.8rem;
+  background: none;
   border: none;
-  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+/* Hero Section */
+.advanced-hero {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(to right, #f97316, #facc15);
+  color: white;
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  margin: 1rem 0;
+}
+
+.hero-buttons button {
+  margin: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
   cursor: pointer;
 }
 
-/* Dark mode styles */
-body.dark-mode {
-  background-color: #1e1e1e;
-  color: #f3f3f3;
+.btn-orange {
+  background-color: #f97316;
+  color: white;
+  border: none;
+  transition: background 0.3s ease;
 }
 
-body.dark-mode .navbar {
-  background-color: #2b2b2b;
+.btn-orange:hover {
+  background-color: #ea580c;
 }
 
-body.dark-mode .nav-links a {
-  color: #ccc;
+.btn-outline {
+  background: none;
+  color: white;
+  border: 2px solid white;
 }
 
-body.dark-mode .nav-links a:hover {
-  color: #ffcc70;
+/* Gallery */
+.advanced-gallery {
+  padding: 2rem;
+  background-color: #fff;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* About Section */
+.advanced-about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 2rem;
+  background-color: #f3f4f6;
+}
+
+.about-image img {
+  max-width: 400px;
+  border-radius: 20px;
+}
+
+.about-details {
+  flex: 1;
+  margin-left: 2rem;
+}
+
+/* Sections */
+.projects, .skills, .certifications, .languages, .hobbies, .locations, .footer-student {
+  padding: 2rem;
+}
+
+.project-list, .skills-list, .certification-list, .location-grid, ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.project, .location {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.project:hover, .location:hover {
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.location-grid {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.location img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 12px;
+}
+
+.footer-student {
+  text-align: center;
+  background-color: #f97316;
+  color: white;
+  padding: 3rem 1rem;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hover-effect {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .about-details {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+  .advanced-navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
