@@ -1,216 +1,75 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>MAHESWAR REDDY - Portfolio</title>
-    <link rel="stylesheet" href="./style.css"/>
-    <script src="./script.js"></script>
-  </head>
-  <body>
-    <!-- Navigation Bar -->
-    <nav>
-      <div id="home">
-        <div class="profile_name">
-           MUMMADI MAHESWAR REDDY
-          <div class="contact_info">
-            <img src="html_finalprojimages/envelope.png" alt="https://icons8.com/icon/124377/circled-envelope"/>
-          MUMMADIMAHESH12@GMAIL.COM
+import React from 'react';
+import './home.css';
+
+const Home = () => {
+  return (
+    <div className="home-container">
+      <section className="hero-section">
+        <div className="hero-content">
+          <h1 className="hero-name">Mummadi Maheswar Reddy</h1>
+          <p className="hero-contact">📧 22b61a66a4@nmrec.edu.in | 📞 +91 6303863875 | 📍 Hyderabad</p>
         </div>
-        <div style="clear:both;"></div>
-        <div class="contact_info">
-          <img src="html_finalprojimages/phone.png" alt="https://icons8.com/icon/124377/circled-envelope"/>
-          6303863875
+      </section>
 
-        </div>
-        </div>
-        <div class="topdiv">
-          <a class="topmenu" href="#about-me">About Me</a>
-          <a class="topmenu" href="#about-me">Skills</a>
-          <a class="topmenu" href="#about-me">Projects</a>
-          <a class="topmenu" href="#about-me">Recommendations</a>
+      <section className="section">
+        <h2 className="section-title">Career Objective</h2>
+        <p className="section-text">
+          I am passionate about leveraging AI to solve complex challenges, optimize business processes, and enhance user experiences. My goal is to become an AI Developer, contributing to the field by designing intelligent systems and implementing innovative solutions. With expertise in ML, DL, and NLP, I thrive on building intelligent applications that improve efficiency and engagement.
+        </p>
+      </section>
 
-        </div>
-      </div>    
-    </nav>
+      <section className="section">
+        <h2 className="section-title">Education</h2>
+        <ul className="section-list">
+          <li><strong>B.Tech (CSE)</strong> - Nalla Malla Reddy Engineering College (2022 - 2026)</li>
+          <li><strong>XII</strong> - Narayana Junior College, Kadapa (2022) - 90%</li>
+          <li><strong>X</strong> - Bhashyam High School, Kadapa (2020) - 98.3%</li>
+        </ul>
+      </section>
 
-    <!-- About Me -->
-    <section id="about-me" class="container">
-      <div>
-        <img src="https://cdn.pixabay.com/photo/2024/10/22/02/30/planet-9138502_1280.png" class="profile_image"/>
-      </div>
+      <section className="section">
+        <h2 className="section-title">Certifications & Training</h2>
+        <ul className="section-list">
+          <li>AI Developer - IBM (Aug 2024 - Present)</li>
+          <li>Generative AI with Vertex AI - Google (Aug 2024)</li>
+          <li>NLP - Microsoft (Jul 2024 - Aug 2024)</li>
+          <li>Computer Vision - Microsoft Azure (Jul 2024)</li>
+          <li>Azure ML - Microsoft (Jul 2024)</li>
+          <li>AI on Azure - Microsoft (Jun 2024)</li>
+          <li>AI Essentials - Google (Jun 2024)</li>
+          <li>Python for Data Science - NPTEL (Jan 2024 - Mar 2024)</li>
+        </ul>
+      </section>
 
-      <div>
-          <h1>
-            Hi, I'm MUMMADIMAHESWAR REDDY ! <img src="html_finalprojimages/waving-hand.png" width="60px"/>
-          </h1>
-          <p>
-"I am a passionate student eager to dive into the world of artificial intelligence development. My goal is to build innovative AI-driven solutions that solve real-world problems. I seek to understand core concepts such as machine learning, natural language processing, neural networks, and AI ethics. I aim to master programming languages like Python, explore frameworks like TensorFlow and PyTorch, and develop a solid foundation in mathematics and statistics. I am open to guidance, resources, and a clear roadmap to becoming an accomplished AI developer."
+      <section className="section">
+        <h2 className="section-title">Projects</h2>
+        <ul className="section-list">
+          <li><strong>Image Captioning</strong> (Jan 2025): AI-generated captions for images using Gradio UI.</li>
+          <li><strong>Chatbot with LLMs</strong> (Dec 2024 - Jan 2025): Built with Hugging Face and Python NLP.</li>
+          <li><strong>Sentiment Analysis</strong> (Nov 2024): Classified text sentiments using ML.</li>
+          <li><strong>Emotion Detector</strong> (Nov 2024): NLP-based system for recognizing emotions from text.</li>
+        </ul>
+      </section>
 
+      <section className="section">
+        <h2 className="section-title">Technical Skills</h2>
+        <ul className="section-list">
+          <li>Python</li>
+          <li>HTML, CSS, JavaScript</li>
+          <li>Machine Learning, Deep Learning</li>
+          <li>Natural Language Processing (NLP), Computer Vision</li>
+          <li>Microsoft Azure, Google Cloud (Vertex AI)</li>
+        </ul>
+      </section>
 
-          </p>
-      </div>
-    </section>
-              
-    <!-- Skills -->
-    <section id="skills">
-      <h2>Skills</h2>
-      <div style="clear:both;"></div>
-
-      <div class="all_skills">
-        <div class="skill">
-          <img src="html_finalprojimages/html5.png"/>
-          <h6>HTML</h6>
-          <p></p>
-        </div>  
-
-        <div class="skill">
-          <img src="html_finalprojimages/js.jpeg"/>
-          <h6>JavaScript</h6>
-          <p></p>
-        </div>  
-
-        <div class="skill">
-            <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/Types_of_Artificial_Intelligence.jpg"/>
-              <h6>python for datascience</h6>
-            <p>1years experience</p>
-          </div>  
-          <div class="skill">
-            <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/Types_of_Artificial_Intelligence.jpg"/>
-            <h6>introdution to artifical intelligence</h6>
-            <p>0.6years experience</p>
-          </div>  
-          <div class="skill">
-            <img src="https://builtin.com/sites/www.builtin.com/files/styles/ckeditor_optimize/public/inline-images/machine-learning-pillar-page-overview.jpeg"/>
-            <h6>Machine learning </h6>
-            <p></p>
-          </div>  
-</div>  
-          <div class="skill">
-            <img src="https://builtin.com/sites/www.builtin.com/files/styles/ckeditor_optimize/public/inline-images/machine-learning-pillar-page-overview.jpeg"/>
-            <h6>Artificial Intelligence</h6>
-            <p></p>
-          </div>  
-</div>  
-          <div class="skill">
-            <img src="https://builtin.com/sites/www.builtin.com/files/styles/ckeditor_optimize/public/inline-images/machine-learning-pillar-page-overview.jpeg"/>
-            <h6>Natural language processing</h6>
-            <p></p>
-          </div>  
-      </div></div>  
-          <div class="skill">
-            <img src="https://builtin.com/sites/www.builtin.com/files/styles/ckeditor_optimize/public/inline-images/machine-learning-pillar-page-overview.jpeg"/>
-            <h6>Neural Network</h6>
-            <p></p>
-          </div>  
-    </section>
-          
-    <!-- Projects -->
-    <section class="projects" id="projects">
-      <h2>
-        Projects
-      </h2>
-      <div style="clear:both;"></div>
-
-        <div id="projects-container" class="projects-container">
-          <div class="project-card">
-            <h3>website</h3>
-            <ul>
-              <li>Developed a  website using HTML, CSS, JavaScript and IBM Watson Assistant</li>
-            </ul>
-          </div>
-          <hr>
-          <div class="project-card">
-            <h3>develop app with gemini</h3>
-            <ul>
-              <li>Developed and deployed a app using gemini in qwikslabs</li>
-            </ul>
-          </div>
-          <hr>
-          <div class="project-card">
-            <h3>IMAGE CAPTIONING USING GENERATIVE AI </h3>
-            <ul>
-              <li>Developed in IBM SKILL NETWORK</li>
-            </ul>
-            </ul>
-          </div>
-          <hr>
-          <div class="project-card">
-            <h3>EMOTION DETECTOR </h3>
-            <ul>
-              <li>Developed BY USING IBM SKILL NETWORK </li>            </ul>
-          </div>
-          <hr>
-          <div class="project-card">
-            <h3>chatbot for your own data</h3>
-            <ul>
-              <li>developed using ibm skill network</li>
-          </div>
-          <hr>
-          <div class="project-card">
-            <h3>generative ai with vertex ai</h3>
-            <ul>
-              <li> i studies generative with vertex ai in coursera</li>
-            </ul>
-          </div>
+      <section className="section">
+        <h2 className="section-title">Portfolio</h2>
+        <a className="portfolio-link" href="http://mummadimaheswar.github.io/my-portfolio/" target="_blank" rel="noopener noreferrer">
+          Visit My Portfolio
+        </a>
+      </section>
     </div>
-    </section>
-    <div style="clear:both;"></div>
+  );
+};
 
-    <!-- Recommendations -->
-    <section id="recommendations">
-      <h2>Recommendations</h2>
-      <div style="clear:both;"></div>
-      <div class="all_recommendations" id="all_recommendations">
-        <div class="recommendation">
-          <span>&#8220;</span>
-         maheswar is a very quick learner and quickly grasps key concepts of Web development. 
-          he got a great attitude & he is an excellent team player. 
-          he has a curious mind and asks the right question. 
-          he takes initiative within a team and has potentials to lead the team.
-          <span>&#8221;</span>
-        </div>
-        <div class="recommendation">
-          <span>&#8220;</span>
-          Working with maheswar has been an awesome experience. 
-          he is highly knowledgable and always goes the extra step to make sure everything is right. 
-          For any future projects that need him expertise I would definitely want to work with himagain.
-          <span>&#8221;</span>
-        </div>
-        <div class="recommendation">
-          <span>&#8220;</span>
-          I had worked along with maheswar during the initial phase of our venture which needed Web development. 
-          he is a committed resource who has in depth knowledge about the domain. 
-          he will be an asset for any organisation! 
-          <span>&#8221;</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Recommendation Form -->
-    <section id="contact">
-      <div class="flex_center">
-        <fieldset>
-          <legend class="introduction">Leave a Recommendation</legend>          
-          <input type="text" placeholder="Name (Optional)"> <br/>
-          <textarea id="new_recommendation" cols="500" rows="10" placeholder="Message"></textarea>
-          <div class="flex_center">
-            <button id="recommend_btn" onclick="addRecommendation()">Submit</button>
-          </div>
-        </fieldset>
-      </div>
-    </section>
-
-    <div class="iconbutton">
-      <a href="#home">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" width="63px">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-      </a>
-    </div>
-
-    <div class="popup" id="popup" class="flex_center">
-      <img src="html_finalprojimages/checkmark--outline.svg"/>
-      <h3><!-- Add appropriate text here--></h3>
-      <button onclick="showPopup(false)">Ok</button>
-    </div>
-  </body>
-</html>
+export default Home;
