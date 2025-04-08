@@ -3,13 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maheswar Portfolio</title>
+  <title>MUMMADI MAHESWAR REDDY Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
   <div class="home-container">
     <nav class="navbar advanced-navbar">
-      <h1 class="logo">Maheswar</h1>
+      <h1 class="logo">MAHESWAR REDDY</h1>
       <div class="nav-links">
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
@@ -32,14 +35,19 @@
 
     <section class="gallery advanced-gallery fade-in">
       <div class="gallery-grid">
-        <img src="/images/ai1.jpg" alt="AI Project 1">
-        <img src="/images/ai2.jpg" alt="AI Project 2">
-        <img src="/images/ai3.jpg" alt="AI Project 3">
-        <img src="/images/ai4.jpg" alt="AI Project 4">
-        <img src="/images/ai5.jpg" alt="AI Project 5">
-        <img src="/images/ai6.jpg" alt="AI Project 6">
+        <img src="/images/ai1.jpg" alt="AI Project 1" class="previewable">
+        <img src="/images/ai2.jpg" alt="AI Project 2" class="previewable">
+        <img src="/images/ai3.jpg" alt="AI Project 3" class="previewable">
+        <img src="/images/ai4.jpg" alt="AI Project 4" class="previewable">
+        <img src="/images/ai5.jpg" alt="AI Project 5" class="previewable">
+        <img src="/images/ai6.jpg" alt="AI Project 6" class="previewable">
       </div>
     </section>
+
+    <div class="modal">
+      <span class="close">&times;</span>
+      <img src="" alt="Preview">
+    </div>
 
     <section class="about advanced-about fade-in">
       <div class="about-image">
@@ -141,7 +149,5 @@
       <p>This is a student portfolio created with a focus on AI, ML, and advanced project work. Designed for showcasing skills, certifications, and technical growth.</p>
     </section>
   </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
