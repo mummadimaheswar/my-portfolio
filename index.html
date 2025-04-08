@@ -2,114 +2,99 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maheswar's Portfolio</title>
-  <link rel="stylesheet" href="advanced-portfolio.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Maheswar Reddy | AI Developer Portfolio</title>
+  <link rel="stylesheet" href="Advanced-portfolio-css.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <div class="home-container">
-    <header class="advanced-navbar">
-      <div class="logo">Maheswar</div>
-      <nav class="nav-links">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <button class="theme-toggle" id="theme-toggle">🌓</button>
-    </header>
+  <div class="loader"></div>
+  <header class="navbar">
+    <div class="logo">Maheswar Reddy</div>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+      <button class="theme-toggle">🌙</button>
+    </nav>
+  </header>
 
-    <section class="advanced-hero">
-      <h1 class="hero-title">AI Developer & Engineer</h1>
-      <p class="hero-subtitle">Passionate about building impactful AI solutions with a strong foundation in ML, CV, and NLP</p>
-      <div class="hero-buttons">
-        <button class="btn-orange">Download CV</button>
-        <button class="btn-outline">Hire Me</button>
+  <section class="hero">
+    <h1 class="typewriter">Maheswar Reddy</h1>
+    <p>Final-year B.Tech | Passionate AI Developer | Portfolio Showcase</p>
+  </section>
+
+  <section id="about" class="fade-in">
+    <h2>About Me</h2>
+    <p>I am Maheswar Reddy, a dedicated final-year B.Tech student with a strong academic background and a passion for AI and ML development. I enjoy building meaningful, real-world projects that can create impact.</p>
+  </section>
+
+  <section id="skills" class="fade-in">
+    <h2>Skills</h2>
+    <ul>
+      <li>Python, Java, C++</li>
+      <li>Machine Learning, Deep Learning</li>
+      <li>Generative AI, Computer Vision</li>
+      <li>n8n, Google Sheets API</li>
+      <li>HTML, CSS, JavaScript</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="fade-in">
+    <h2>Projects</h2>
+    <ul>
+      <li>Image Captioning using Generative AI</li>
+      <li>Sentiment Analysis Tool</li>
+      <li>Personal Data Chatbot</li>
+      <li>AI Career Coach</li>
+      <li>Flight Ticket Booking System</li>
+    </ul>
+  </section>
+
+  <section id="certifications" class="fade-in">
+    <h2>Certifications</h2>
+    <ul>
+      <li>IBM AI Engineer Professional Certificate</li>
+      <li>Azure AI Services Masterclass</li>
+      <li>Prompt Engineering for ChatGPT</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="cta-section">
+    <h3>Ready to bring AI to your projects?</h3>
+    <button class="btn-orange">Contact Now</button>
+  </section>
+
+  <section class="hobbies-languages fade-in">
+    <h2>Hobbies & Languages</h2>
+    <p><strong>Hobbies:</strong> Coding, Exploring AI, Blogging, Designing</p>
+    <p><strong>Languages Known:</strong> Telugu, English, Hindi</p>
+  </section>
+
+  <section class="locations fade-in">
+    <h2>Locations</h2>
+    <div class="location-grid">
+      <div class="location">
+        <img src="/images/hyderabad.jpg" alt="Hyderabad">
+        <p>Hyderabad, Telangana</p>
       </div>
-    </section>
-
-    <section id="about" class="advanced-about fade-in">
-      <div class="about-image">
-        <img src="./images/profile.jpg" alt="Maheswar profile">
+      <div class="location">
+        <img src="/images/kadapa.jpg" alt="Kadapa">
+        <p>Kadapa, Andhra Pradesh</p>
       </div>
-      <div class="about-details">
-        <h2>About Me</h2>
-        <p>I’m Maheswar Reddy, a final-year BTech student and AI enthusiast. I love applying machine learning to solve real-world problems. I’ve built projects like AI career coaches, image captioning apps, and chatbots. My goal is to join a product-based company and make a difference with intelligent systems.</p>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="projects" class="projects fade-in">
-      <h2>Projects</h2>
-      <ul class="project-list">
-        <li class="project">Image Captioning using Generative AI</li>
-        <li class="project">Sentiment Analysis Engine</li>
-        <li class="project">Chatbot for Debtors using Google Sheets & n8n</li>
-        <li class="project">AI Career Coach Chatbot</li>
-      </ul>
-    </section>
+  <footer class="footer">
+    <p>&copy; 2025 Maheswar Reddy | AI Developer</p>
+  </footer>
 
-    <section id="skills" class="skills fade-in">
-      <h2>Skills</h2>
-      <ul class="skills-list">
-        <li>Python, Java, C++</li>
-        <li>Machine Learning & Deep Learning</li>
-        <li>Natural Language Processing</li>
-        <li>Computer Vision</li>
-        <li>Docker, Azure, n8n</li>
-      </ul>
-    </section>
-
-    <section id="certifications" class="certifications fade-in">
-      <h2>Certifications</h2>
-      <ul class="certification-list">
-        <li>IBM AI Engineer – Coursera</li>
-        <li>Prompt Engineering for Developers – OpenAI</li>
-        <li>AI Ethics and Law – Stanford Online</li>
-      </ul>
-    </section>
-
-    <section class="languages fade-in">
-      <h2>Languages</h2>
-      <ul>
-        <li>Telugu</li>
-        <li>English</li>
-        <li>Hindi</li>
-      </ul>
-    </section>
-
-    <section class="hobbies fade-in">
-      <h2>Hobbies</h2>
-      <ul>
-        <li>Building AI tools</li>
-        <li>Designing UI/UX concepts</li>
-        <li>Exploring tech & law</li>
-      </ul>
-    </section>
-
-    <section class="locations fade-in">
-      <h2>Locations</h2>
-      <div class="location-grid">
-        <div class="location">
-          <img src="./images/hyderabad.jpg" alt="Hyderabad">
-          <p>Hyderabad, Telangana</p>
-        </div>
-        <div class="location">
-          <img src="./images/kadapa.jpg" alt="Kadapa">
-          <p>Kadapa, Andhra Pradesh</p>
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer-student fade-in">
-      <h2>Let’s Build Together</h2>
-      <p>Driven by innovation. Powered by learning. Let’s make AI impactful.</p>
-    </footer>
-  </div>
-
-  <script src="advanced-portfolio.js"></script>
+  <script src="Advanced-portfolio-js.js"></script>
 </body>
 
 </html>
