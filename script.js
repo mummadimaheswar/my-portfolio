@@ -1,8 +1,24 @@
+const themeToggle = document.querySelector('.theme-toggle');
+const rootElement = document.documentElement;
 
-  document.body.classList.toggle('dark-mode');
-  const isDark = document.body.classList.contains('dark-mode');
-  localStorage.setItem('theme', isDark ? 'dark' : 'light');
-};
+function applyDarkModePreference() {
+  const isDarkMode = localStorage.getItem('theme') === 'dark';
+  if (isDarkMode) {
+    rootElement.classList.add('dark-mode');
+  } else {
+    rootElement.classList.remove('dark-mode');
+  }
+}
+
+applyDarkModePreference();
+
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    rootElement.classList.toggle('dark-mode');
+    const isDark = rootElement.classList.contains('dark-mode');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  });
+
 
 
 const applyStoredTheme = () => {
