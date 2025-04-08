@@ -88,7 +88,54 @@ nav a::after {
 
 nav a:hover::after {
   width: 100%;
+}/* === Section Backgrounds === */
+
+#objection {
+  background-color: #ffeef0; /* light pink */
 }
+
+#certification {
+  background-color: #e8f5e9; /* light green */
+}
+
+#projects {
+  background-color: #e3f2fd; /* light blue */
+}
+
+#skills {
+  background-color: #fff3e0; /* light orange */
+}
+
+#contact {
+  background-color: #f3e5f5; /* light purple */
+}
+
+/* Dark mode adjustments */
+body.dark-mode #objection,
+body.auto-theme #objection {
+  background-color: #3b1f22;
+}
+
+body.dark-mode #certification,
+body.auto-theme #certification {
+  background-color: #1e3d2f;
+}
+
+body.dark-mode #projects,
+body.auto-theme #projects {
+  background-color: #1a2d3f;
+}
+
+body.dark-mode #skills,
+body.auto-theme #skills {
+  background-color: #3b2b1a;
+}
+
+body.dark-mode #contact,
+body.auto-theme #contact {
+  background-color: #2e1f3b;
+}
+
 
 section {
   padding: 2rem;
