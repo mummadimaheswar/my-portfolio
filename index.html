@@ -4,72 +4,125 @@ import './home.css';
 const Home = () => {
   return (
     <div className="home-container">
-      <section className="hero-section">
+      <section className="hero">
         <div className="hero-content">
-          <h1 className="hero-name">Mummadi Maheswar Reddy</h1>
-          <p className="hero-contact">📧 22b61a66a4@nmrec.edu.in | 📞 +91 6303863875 | 📍 Hyderabad</p>
+          <h1 className="hero-title">Mummadi Maheswar Reddy</h1>
+          <p className="hero-subtitle">📧 22b61a66a4@nmrec.edu.in | 📞 +91 6303863875 | 📍 Hyderabad</p>
+          <div className="hero-buttons">
+            <button className="btn-orange">View Projects</button>
+            <button className="btn-outline">Contact Me</button>
+          </div>
         </div>
       </section>
 
-      <section className="section">
-        <h2 className="section-title">Career Objective</h2>
-        <p className="section-text">
-          I am passionate about leveraging AI to solve complex challenges, optimize business processes, and enhance user experiences. My goal is to become an AI Developer, contributing to the field by designing intelligent systems and implementing innovative solutions. With expertise in ML, DL, and NLP, I thrive on building intelligent applications that improve efficiency and engagement.
-        </p>
+      <section className="gallery">
+        <div className="gallery-grid">
+          <img src="/images/ai1.jpg" alt="AI Project 1" />
+          <img src="/images/ai2.jpg" alt="AI Project 2" />
+          <img src="/images/ai3.jpg" alt="AI Project 3" />
+          <img src="/images/ai4.jpg" alt="AI Project 4" />
+          <img src="/images/ai5.jpg" alt="AI Project 5" />
+          <img src="/images/ai6.jpg" alt="AI Project 6" />
+        </div>
       </section>
 
-      <section className="section">
-        <h2 className="section-title">Education</h2>
-        <ul className="section-list">
-          <li><strong>B.Tech (CSE)</strong> - Nalla Malla Reddy Engineering College (2022 - 2026)</li>
-          <li><strong>XII</strong> - Narayana Junior College, Kadapa (2022) - 90%</li>
-          <li><strong>X</strong> - Bhashyam High School, Kadapa (2020) - 98.3%</li>
+      <section className="about">
+        <div className="about-image">
+          <img src="/images/deep-learning.jpg" alt="Deep Learning Visualization" />
+        </div>
+        <div className="about-details">
+          <h2>Intelligent Systems Development</h2>
+          <p>Specializing in building AI-powered intelligent systems to enhance decision-making and automation.</p>
+          <h2>Chatbot Creation</h2>
+          <p>Expertise in developing chatbots for customer guidance, interaction, and support.</p>
+          <h2>Deep Learning Models</h2>
+          <p>Hands-on experience implementing neural networks for image, text, and speech understanding.</p>
+        </div>
+      </section>
+
+      <section className="projects">
+        <h2>Projects</h2>
+        <div className="project-list">
+          <div className="project">
+            <h3>Image Captioning using Gradio</h3>
+            <p>Developed an AI-powered image captioning system with Gradio to generate captions.</p>
+          </div>
+          <div className="project">
+            <h3>Chatbot with Open Source LLMs</h3>
+            <p>Built a chatbot using Hugging Face LLMs integrated with Python NLP pipelines.</p>
+          </div>
+          <div className="project">
+            <h3>Sentiment Analysis</h3>
+            <p>Analyzed sentiments in text to provide insights for customer decision-making.</p>
+          </div>
+          <div className="project">
+            <h3>Emotion Detector</h3>
+            <p>Built a system to detect emotions from text using NLP and deep learning.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="skills">
+        <h2>Technical Skills</h2>
+        <ul className="skills-list">
+          <li><strong>Python</strong> - Primary language for AI & ML development</li>
+          <li><strong>Machine Learning</strong> - Model training, evaluation, and tuning</li>
+          <li><strong>Deep Learning</strong> - CNNs, RNNs, and Transformers</li>
+          <li><strong>Natural Language Processing (NLP)</strong> - Chatbots, sentiment analysis, etc.</li>
+          <li><strong>Computer Vision</strong> - Image classification, detection</li>
+          <li><strong>Cloud Platforms</strong> - Microsoft Azure, Google Cloud Vertex AI</li>
         </ul>
       </section>
 
-      <section className="section">
-        <h2 className="section-title">Certifications & Training</h2>
-        <ul className="section-list">
-          <li>AI Developer - IBM (Aug 2024 - Present)</li>
-          <li>Generative AI with Vertex AI - Google (Aug 2024)</li>
-          <li>NLP - Microsoft (Jul 2024 - Aug 2024)</li>
-          <li>Computer Vision - Microsoft Azure (Jul 2024)</li>
-          <li>Azure ML - Microsoft (Jul 2024)</li>
-          <li>AI on Azure - Microsoft (Jun 2024)</li>
-          <li>AI Essentials - Google (Jun 2024)</li>
-          <li>Python for Data Science - NPTEL (Jan 2024 - Mar 2024)</li>
+      <section className="certifications">
+        <h2>Certifications</h2>
+        <ul className="certification-list">
+          <li><strong>AI Developer</strong> - IBM, Aug 2024</li>
+          <li><strong>Generative AI with Vertex AI</strong> - Google, Aug 2024</li>
+          <li><strong>Natural Language Processing</strong> - Microsoft, Jul-Aug 2024</li>
+          <li><strong>Computer Vision in Azure</strong> - Microsoft, Jul 2024</li>
+          <li><strong>Azure Machine Learning</strong> - Microsoft, Jul 2024</li>
+          <li><strong>Artificial Intelligence on Azure</strong> - Microsoft, Jun 2024</li>
+          <li><strong>AI Essentials</strong> - Google, Jun 2024</li>
+          <li><strong>Python for Data Science</strong> - NPTEL, Jan-Mar 2024</li>
         </ul>
       </section>
 
-      <section className="section">
-        <h2 className="section-title">Projects</h2>
-        <ul className="section-list">
-          <li><strong>Image Captioning</strong> (Jan 2025): AI-generated captions for images using Gradio UI.</li>
-          <li><strong>Chatbot with LLMs</strong> (Dec 2024 - Jan 2025): Built with Hugging Face and Python NLP.</li>
-          <li><strong>Sentiment Analysis</strong> (Nov 2024): Classified text sentiments using ML.</li>
-          <li><strong>Emotion Detector</strong> (Nov 2024): NLP-based system for recognizing emotions from text.</li>
+      <section className="languages">
+        <h2>Languages Known</h2>
+        <ul>
+          <li>Telugu</li>
+          <li>English</li>
+          <li>Hindi</li>
         </ul>
       </section>
 
-      <section className="section">
-        <h2 className="section-title">Technical Skills</h2>
-        <ul className="section-list">
-          <li>Python</li>
-          <li>HTML, CSS, JavaScript</li>
-          <li>Machine Learning, Deep Learning</li>
-          <li>Natural Language Processing (NLP), Computer Vision</li>
-          <li>Microsoft Azure, Google Cloud (Vertex AI)</li>
+      <section className="hobbies">
+        <h2>Hobbies & Interests</h2>
+        <ul>
+          <li>Playing badminton</li>
+          <li>Exploring AI tools and technologies</li>
+          <li>Participating in coding challenges</li>
+          <li>Volunteering in tech communities</li>
         </ul>
       </section>
 
-      <section className="section">
-        <h2 className="section-title">Portfolio</h2>
-        <a className="portfolio-link" href="http://mummadimaheswar.github.io/my-portfolio/" target="_blank" rel="noopener noreferrer">
-          Visit My Portfolio
-        </a>
+      <section className="locations">
+        <h2>Locations</h2>
+        <div className="location-grid">
+          <div className="location">
+            <img src="/images/hyderabad.jpg" alt="Hyderabad" />
+            <p>Hyderabad, Telangana</p>
+          </div>
+          <div className="location">
+            <img src="/images/kadapa.jpg" alt="Kadapa" />
+            <p>Kadapa, Andhra Pradesh</p>
+          </div>
+        </div>
       </section>
     </div>
   );
 };
 
 export default Home;
+
