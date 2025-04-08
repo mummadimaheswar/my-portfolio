@@ -1,155 +1,147 @@
-import React, { useEffect } from 'react';
-import './home.css';
-import { toggleDarkMode } from './theme';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maheswar Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="home-container">
+    <nav class="navbar advanced-navbar">
+      <h1 class="logo">Maheswar</h1>
+      <div class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+        <button class="theme-toggle">🌙 Dark Mode</button>
+      </div>
+    </nav>
 
-const Home = () => {
-  useEffect(() => {
-    const buttons = document.querySelectorAll('button');
-    buttons.forEach((btn) => {
-      btn.addEventListener('mouseenter', () => {
-        btn.classList.add('hover-effect');
-      });
-      btn.addEventListener('mouseleave', () => {
-        btn.classList.remove('hover-effect');
-      });
-    });
-  }, []);
-
-  return (
-    <div className="home-container">
-      <section className="hero">
-        <div className="hero-content">
-          <h1 className="hero-title">Mummadi Maheswar Reddy</h1>
-          <p className="hero-subtitle">📧 22b61a66a4@nmrec.edu.in | 📞 +91 6303863875 | 📍 Hyderabad</p>
-          <div className="hero-buttons">
-            <button className="btn-orange">View Projects</button>
-            <button className="btn-outline">Contact Me</button>
-          </div>
+    <section class="hero advanced-hero fade-in">
+      <div class="hero-content">
+        <h1 class="hero-title">Mummadi Maheswar Reddy</h1>
+        <p class="hero-subtitle">📧 22b61a66a4@nmrec.edu.in | 📞 +91 6303863875 | 📍 Hyderabad</p>
+        <div class="hero-buttons">
+          <button class="btn-orange">View Projects</button>
+          <button class="btn-outline">Contact Me</button>
         </div>
-      </section>
-<nav className="navbar">
-  <h1>Maheswar</h1>
-  <div className="nav-links">
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#contact">Contact</a>
-    <button className="theme-toggle" onClick={toggleDarkMode}>Toggle Dark Mode</button>
+      </div>
+    </section>
+
+    <section class="gallery advanced-gallery fade-in">
+      <div class="gallery-grid">
+        <img src="/images/ai1.jpg" alt="AI Project 1">
+        <img src="/images/ai2.jpg" alt="AI Project 2">
+        <img src="/images/ai3.jpg" alt="AI Project 3">
+        <img src="/images/ai4.jpg" alt="AI Project 4">
+        <img src="/images/ai5.jpg" alt="AI Project 5">
+        <img src="/images/ai6.jpg" alt="AI Project 6">
+      </div>
+    </section>
+
+    <section class="about advanced-about fade-in">
+      <div class="about-image">
+        <img src="/images/deep-learning.jpg" alt="Deep Learning Visualization">
+      </div>
+      <div class="about-details">
+        <h2>Intelligent Systems Development</h2>
+        <p>Specializing in building AI-powered intelligent systems to enhance decision-making and automation.</p>
+        <h2>Chatbot Creation</h2>
+        <p>Expertise in developing chatbots for customer guidance, interaction, and support.</p>
+        <h2>Deep Learning Models</h2>
+        <p>Hands-on experience implementing neural networks for image, text, and speech understanding.</p>
+      </div>
+    </section>
+
+    <section class="projects fade-in" id="projects">
+      <h2>Projects</h2>
+      <div class="project-list">
+        <div class="project">
+          <h3>Image Captioning using Gradio</h3>
+          <p>Developed an AI-powered image captioning system with Gradio to generate captions.</p>
+        </div>
+        <div class="project">
+          <h3>Chatbot with Open Source LLMs</h3>
+          <p>Built a chatbot using Hugging Face LLMs integrated with Python NLP pipelines.</p>
+        </div>
+        <div class="project">
+          <h3>Sentiment Analysis</h3>
+          <p>Analyzed sentiments in text to provide insights for customer decision-making.</p>
+        </div>
+        <div class="project">
+          <h3>Emotion Detector</h3>
+          <p>Built a system to detect emotions from text using NLP and deep learning.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills fade-in" id="skills">
+      <h2>Technical Skills</h2>
+      <ul class="skills-list">
+        <li><strong>Python</strong> - Primary language for AI & ML development</li>
+        <li><strong>Machine Learning</strong> - Model training, evaluation, and tuning</li>
+        <li><strong>Deep Learning</strong> - CNNs, RNNs, and Transformers</li>
+        <li><strong>NLP</strong> - Chatbots, sentiment analysis, text classification</li>
+        <li><strong>Computer Vision</strong> - Object detection, image analysis</li>
+        <li><strong>Cloud</strong> - Azure, Google Cloud Vertex AI</li>
+      </ul>
+    </section>
+
+    <section class="certifications fade-in" id="certifications">
+      <h2>Certifications</h2>
+      <ul class="certification-list">
+        <li><strong>AI Developer</strong> - IBM, Aug 2024</li>
+        <li><strong>Generative AI with Vertex AI</strong> - Google, Aug 2024</li>
+        <li><strong>NLP</strong> - Microsoft, Jul-Aug 2024</li>
+        <li><strong>Computer Vision</strong> - Microsoft, Jul 2024</li>
+        <li><strong>Azure Machine Learning</strong> - Microsoft, Jul 2024</li>
+        <li><strong>AI on Azure</strong> - Microsoft, Jun 2024</li>
+        <li><strong>AI Essentials</strong> - Google, Jun 2024</li>
+        <li><strong>Python for Data Science</strong> - NPTEL, Jan-Mar 2024</li>
+      </ul>
+    </section>
+
+    <section class="languages fade-in">
+      <h2>Languages Known</h2>
+      <ul>
+        <li>Telugu</li>
+        <li>English</li>
+        <li>Hindi</li>
+      </ul>
+    </section>
+
+    <section class="hobbies fade-in">
+      <h2>Hobbies & Interests</h2>
+      <ul>
+        <li>Playing badminton</li>
+        <li>Exploring AI tools and technologies</li>
+        <li>Participating in coding challenges</li>
+        <li>Volunteering in tech communities</li>
+      </ul>
+    </section>
+
+    <section class="locations fade-in">
+      <h2>Locations</h2>
+      <div class="location-grid">
+        <div class="location">
+          <img src="/images/hyderabad.jpg" alt="Hyderabad">
+          <p>Hyderabad, Telangana</p>
+        </div>
+        <div class="location">
+          <img src="/images/kadapa.jpg" alt="Kadapa">
+          <p>Kadapa, Andhra Pradesh</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer-student fade-in">
+      <h2>Student Portfolio</h2>
+      <p>This is a student portfolio created with a focus on AI, ML, and advanced project work. Designed for showcasing skills, certifications, and technical growth.</p>
+    </section>
   </div>
-</nav>
 
-      <section className="gallery">
-        <div className="gallery-grid">
-          <img src="/images/ai1.jpg" alt="AI Project 1" />
-          <img src="/images/ai2.jpg" alt="AI Project 2" />
-          <img src="/images/ai3.jpg" alt="AI Project 3" />
-          <img src="/images/ai4.jpg" alt="AI Project 4" />
-          <img src="/images/ai5.jpg" alt="AI Project 5" />
-          <img src="/images/ai6.jpg" alt="AI Project 6" />
-        </div>
-      </section>
-
-      <section className="about">
-        <div className="about-image">
-          <img src="/images/deep-learning.jpg" alt="Deep Learning Visualization" />
-        </div>
-        <div className="about-details">
-          <h2>Intelligent Systems Development</h2>
-          <p>Specializing in building AI-powered intelligent systems to enhance decision-making and automation.</p>
-          <h2>Chatbot Creation</h2>
-          <p>Expertise in developing chatbots for customer guidance, interaction, and support.</p>
-          <h2>Deep Learning Models</h2>
-          <p>Hands-on experience implementing neural networks for image, text, and speech understanding.</p>
-        </div>
-      </section>
-
-      <section className="projects">
-        <h2>Projects</h2>
-        <div className="project-list">
-          <div className="project">
-            <h3>Image Captioning using Gradio</h3>
-            <p>Developed an AI-powered image captioning system with Gradio to generate captions.</p>
-          </div>
-          <div className="project">
-            <h3>Chatbot with Open Source LLMs</h3>
-            <p>Built a chatbot using Hugging Face LLMs integrated with Python NLP pipelines.</p>
-          </div>
-          <div className="project">
-            <h3>Sentiment Analysis</h3>
-            <p>Analyzed sentiments in text to provide insights for customer decision-making.</p>
-          </div>
-          <div className="project">
-            <h3>Emotion Detector</h3>
-            <p>Built a system to detect emotions from text using NLP and deep learning.</p>
-          </div>
-        </div>
-      </section>
-
-      <section className="skills">
-        <h2>Technical Skills</h2>
-        <ul className="skills-list">
-          <li><strong>Python</strong> - Primary language for AI & ML development</li>
-          <li><strong>Machine Learning</strong> - Model training, evaluation, and tuning</li>
-          <li><strong>Deep Learning</strong> - CNNs, RNNs, and Transformers</li>
-          <li><strong>Natural Language Processing (NLP)</strong> - Chatbots, sentiment analysis, etc.</li>
-          <li><strong>Computer Vision</strong> - Image classification, detection</li>
-          <li><strong>Cloud Platforms</strong> - Microsoft Azure, Google Cloud Vertex AI</li>
-        </ul>
-      </section>
-
-      <section className="certifications">
-        <h2>Certifications</h2>
-        <ul className="certification-list">
-          <li><strong>AI Developer</strong> - IBM, Aug 2024</li>
-          <li><strong>Generative AI with Vertex AI</strong> - Google, Aug 2024</li>
-          <li><strong>Natural Language Processing</strong> - Microsoft, Jul-Aug 2024</li>
-          <li><strong>Computer Vision in Azure</strong> - Microsoft, Jul 2024</li>
-          <li><strong>Azure Machine Learning</strong> - Microsoft, Jul 2024</li>
-          <li><strong>Artificial Intelligence on Azure</strong> - Microsoft, Jun 2024</li>
-          <li><strong>AI Essentials</strong> - Google, Jun 2024</li>
-          <li><strong>Python for Data Science</strong> - NPTEL, Jan-Mar 2024</li>
-        </ul>
-      </section>
-
-      <section className="languages">
-        <h2>Languages Known</h2>
-        <ul>
-          <li>Telugu</li>
-          <li>English</li>
-          <li>Hindi</li>
-        </ul>
-      </section>
-
-      <section className="hobbies">
-        <h2>Hobbies & Interests</h2>
-        <ul>
-          <li>Playing badminton</li>
-          <li>Exploring AI tools and technologies</li>
-          <li>Participating in coding challenges</li>
-          <li>Volunteering in tech communities</li>
-        </ul>
-      </section>
-
-      <section className="locations">
-        <h2>Locations</h2>
-        <div className="location-grid">
-          <div className="location">
-            <img src="/images/hyderabad.jpg" alt="Hyderabad" />
-            <p>Hyderabad, Telangana</p>
-          </div>
-          <div className="location">
-            <img src="/images/kadapa.jpg" alt="Kadapa" />
-            <p>Kadapa, Andhra Pradesh</p>
-          </div>
-        </div>
-      </section>
-
-      <section className="footer-student">
-        <h2>Student Portfolio</h2>
-        <p>This is a student portfolio created with a focus on AI, ML, and advanced project work. Designed for showcasing skills, certifications, and technical growth.</p>
-      </section>
-    </div>
-  );
-};
-
-export default Home;
+  <script src="script.js"></script>
+</body>
+</html>
