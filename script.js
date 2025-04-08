@@ -1,27 +1,43 @@
-function addRecommendation() {
-  // Get the message of the new recommendation
-  let recommendation = document.getElementById("new_recommendation");
-  // If the user has left a recommendation, display a pop-up
-  if (recommendation.value != null && recommendation.value.trim() != "") {
-    console.log("New recommendation added");
-    //Call showPopup here
 
-    // Create a new 'recommendation' element and set it's value to the user's message
-    var element = document.createElement("div");
-    element.setAttribute("class","recommendation");
-    element.innerHTML = "\<span\>&#8220;\</span\>" + recommendation.value + "\<span\>&#8221;\</span\>";
-    // Add this element to the end of the list of recommendations
-    document.getElementById("all_recommendations").appendChild(element); 
-    
-    // Reset the value of the textarea
-    recommendation.value = "";
-  }
+toggleDarkMode = () => {
+  document.body.classList.toggle('dark-mode');
+};
+
+// Fade-in on scroll animation
+const scrollFadeIn = () => {
+  const elements = document.querySelectorAll('.fade-in');
+  const triggerBottom = window.innerHeight * 0.85;
+
+  elements.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < triggerBottom) {
+      el.classList.add('visible');
+    } else {
+      el.classList.remove('visible');
+    }
+  });
+};
+
+// Hover effect for buttons
+const addButtonHoverEffects = () => {
+  const buttons = document.querySelectorAll('button');
+  buttons.forEach(btn => {
+    btn.addEventListener('mouseenter', () => btn.classList.add('hover-effect'));
+    btn.addEventListener('mouseleave', () => btn.classList.remove('hover-effect'));
+  });
+};
+
+// Initialization
+window.addEventListener('DOMContentLoaded', () => {
+  scrollFadeIn();
+  addButtonHoverEffects();
+});
+
+window.addEventListener('scroll', scrollFadeIn);
+
+// Toggle theme on button click
+const themeButton = document.querySelector('.theme-toggle');
+if (themeButton) {
+  themeButton.addEventListener('click', toggleDarkMode);
 }
 
-function showPopup(bool) {
-  if (bool) {
-    document.getElementById('popup').style.visibility = 'visible'
-  } else {
-    document.getElementById('popup').style.visibility = 'hidden'
-  }
-}
