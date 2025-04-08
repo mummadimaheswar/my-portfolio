@@ -1,4 +1,4 @@
-// === Advanced Portfolio JS ===
+// === Advanced Portfolio JS with GSAP and ScrollTrigger ===
 
 // Toggle dark mode with class switch and save preference to localStorage
 const toggleDarkMode = () => {
@@ -55,11 +55,75 @@ const addButtonHoverEffects = () => {
   });
 };
 
+// Add fade-in animation classes
+const animateOnLoad = () => {
+  document.querySelectorAll('.fade-in').forEach(el => {
+    el.classList.add('pre-fade');
+    setTimeout(() => el.classList.add('visible'), 100);
+  });
+};
+
+// Smooth scroll for internal links
+const smoothScroll = () => {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+};
+
+// Modal popup for image previews
+const initModals = () => {
+  const modal = document.querySelector('.modal');
+  const modalImg = document.querySelector('.modal img');
+  const closeModal = document.querySelector('.modal .close');
+
+  if (modal && modalImg && closeModal) {
+    document.querySelectorAll('.previewable').forEach(img => {
+      img.addEventListener('click', () => {
+        modalImg.src = img.src;
+        modal.classList.add('show');
+      });
+    });
+
+    closeModal.addEventListener('click', () => modal.classList.remove('show'));
+    modal.addEventListener('click', e => {
+      if (e.target === modal) modal.classList.remove('show');
+    });
+  }
+};
+
+// GSAP and ScrollTrigger animations
+const initGSAPAnimations = () => {
+  if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+    gsap.utils.toArray('.gsap-fade-in').forEach(el => {
+      gsap.from(el, {
+        scrollTrigger: {
+          trigger: el,
+          start: 'top 80%',
+          toggleActions: 'play none none reverse'
+        },
+        opacity: 0,
+        y: 50,
+        duration: 1
+      });
+    });
+  }
+};
+
 // Initialization
 window.addEventListener('DOMContentLoaded', () => {
   applyStoredTheme();
   scrollFadeIn();
   addButtonHoverEffects();
+  animateOnLoad();
+  smoothScroll();
+  initModals();
+  initGSAPAnimations();
 
   const themeButton = document.querySelector('.theme-toggle');
   if (themeButton) {
@@ -67,5 +131,7 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// Scroll event with debounce for performance
-window.addEventListener('scroll', debounce(scrollFadeIn));
+// Scroll event with debounce and element check for performance
+if (document.querySelectorAll('.fade-in').length > 0) {
+  window.addEventListener('scroll', debounce(scrollFadeIn));
+}
