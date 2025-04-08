@@ -1,129 +1,163 @@
-// === Advanced Portfolio JavaScript ===
+// === Advanced Portfolio JS with GSAP and ScrollTrigger ===
 
-// Dark Mode Toggle with localStorage
-const themeToggle = document.querySelector('.theme-toggle');
-const rootElement = document.documentElement;
+// Toggle dark mode with class switch and save preference to localStorage
+const toggleDarkMode = () => {
+  const isDark = document.body.classList.toggle('dark-mode');
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
+};
 
-function applyDarkModePreference() {
-  const isDarkMode = localStorage.getItem('theme') === 'dark';
-  if (isDarkMode) {
-    rootElement.classList.add('dark-mode');
+// Apply stored theme or system preference on page load
+const applyStoredTheme = () => {
+  const storedTheme = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
+    document.body.classList.add('dark-mode');
   } else {
-    rootElement.classList.remove('dark-mode');
+    document.body.classList.remove('dark-mode');
   }
-}
 
-applyDarkModePreference();
-
-if (themeToggle) {
-  themeToggle.addEventListener('click', () => {
-    rootElement.classList.toggle('dark-mode');
-    const isDark = rootElement.classList.contains('dark-mode');
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-  });
-}
-
-// Modal for image gallery
-const modal = document.querySelector('.image-modal');
-const modalImg = modal?.querySelector('img');
-const galleryImages = document.querySelectorAll('.gallery-grid img');
-
-galleryImages.forEach((img) => {
-  img.addEventListener('click', () => {
-    if (modal && modalImg) {
-      modalImg.src = img.src;
-      modal.classList.add('active');
+  // Listen to system theme changes
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+    if (!localStorage.getItem('theme')) {
+      if (e.matches) {
+        document.body.classList.add('dark-mode');
+      } else {
+        document.body.classList.remove('dark-mode');
+      }
     }
   });
-});
+};
 
-modal?.addEventListener('click', () => {
-  modal.classList.remove('active');
-});
-
-// Debounced fade-in on scroll
-function debounce(fn, delay) {
+// Debounced scroll handler for fade-in animations
+const debounce = (func, wait = 20, immediate = true) => {
   let timeout;
-  return (...args) => {
+  return function () {
+    const context = this, args = arguments;
+    const later = function () {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    const callNow = immediate && !timeout;
     clearTimeout(timeout);
-    timeout = setTimeout(() => fn(...args), delay);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
   };
-}
+};
 
-const fadeInElements = document.querySelectorAll('.fade-in');
+// Fade-in on scroll animation
+const scrollFadeIn = () => {
+  const elements = document.querySelectorAll('.fade-in');
+  const triggerBottom = window.innerHeight * 0.85;
 
-const handleScroll = debounce(() => {
-  fadeInElements.forEach((el) => {
-    const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 100) {
+  elements.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < triggerBottom) {
       el.classList.add('visible');
+    } else {
+      el.classList.remove('visible');
     }
   });
-}, 100);
+};
 
-window.addEventListener('scroll', handleScroll);
-window.addEventListener('load', handleScroll);
-
-// Smooth scroll to sections
-const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
-
-navLinks.forEach((link) => {
-  link.addEventListener('click', (e) => {
-    e.preventDefault();
-    const target = document.querySelector(link.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
+// Hover effect for buttons
+const addButtonHoverEffects = () => {
+  const buttons = document.querySelectorAll('button');
+  buttons.forEach(btn => {
+    btn.addEventListener('mouseenter', () => btn.classList.add('hover-effect'));
+    btn.addEventListener('mouseleave', () => btn.classList.remove('hover-effect'));
   });
+};
+
+// Add fade-in animation classes
+const animateOnLoad = () => {
+  document.querySelectorAll('.fade-in').forEach(el => {
+    el.classList.add('pre-fade');
+    setTimeout(() => el.classList.add('visible'), 100);
+  });
+};
+
+// Smooth scroll for internal links
+const smoothScroll = () => {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+};
+
+// Modal popup for image previews
+const initModals = () => {
+  const modal = document.querySelector('.modal');
+  const modalImg = document.querySelector('.modal img');
+  const closeModal = document.querySelector('.modal .close');
+
+  if (modal && modalImg && closeModal) {
+    document.querySelectorAll('.previewable').forEach(img => {
+      img.addEventListener('click', () => {
+        modalImg.src = img.src;
+        modal.classList.add('show');
+      });
+    });
+
+    closeModal.addEventListener('click', () => modal.classList.remove('show'));
+    modal.addEventListener('click', e => {
+      if (e.target === modal) modal.classList.remove('show');
+    });
+  }
+};
+
+// GSAP and ScrollTrigger animations
+const initGSAPAnimations = () => {
+  if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+    gsap.utils.toArray('.gsap-fade-in').forEach(el => {
+      gsap.from(el, {
+        scrollTrigger: {
+          trigger: el,
+          start: 'top 80%',
+          toggleActions: 'play none none reverse'
+        },
+        opacity: 0,
+        y: 50,
+        duration: 1
+      });
+    });
+  }
+};
+
+// Theme toggle visual cue animation
+const addThemeToggleCue = () => {
+  const btn = document.querySelector('.theme-toggle');
+  if (btn) {
+    btn.classList.add('bump');
+    setTimeout(() => btn.classList.remove('bump'), 300);
+  }
+};
+
+// Initialization
+window.addEventListener('DOMContentLoaded', () => {
+  applyStoredTheme();
+  scrollFadeIn();
+  addButtonHoverEffects();
+  animateOnLoad();
+  smoothScroll();
+  initModals();
+  initGSAPAnimations();
+
+  const themeButton = document.querySelector('.theme-toggle');
+  if (themeButton) {
+    themeButton.addEventListener('click', () => {
+      toggleDarkMode();
+      addThemeToggleCue();
+    });
+  }
 });
 
-// Typewriter Effect for Headline
-const typewriterElement = document.querySelector('.typewriter');
-const words = ["AI Developer", "Machine Learning Engineer", "Student Portfolio"];
-let wordIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-
-function type() {
-  if (!typewriterElement) return;
-  const currentWord = words[wordIndex];
-  const visibleText = isDeleting ? currentWord.substring(0, charIndex--) : currentWord.substring(0, charIndex++);
-  typewriterElement.textContent = visibleText;
-
-  if (!isDeleting && charIndex === currentWord.length) {
-    isDeleting = true;
-    setTimeout(type, 1000);
-  } else if (isDeleting && charIndex === 0) {
-    isDeleting = false;
-    wordIndex = (wordIndex + 1) % words.length;
-    setTimeout(type, 500);
-  } else {
-    setTimeout(type, isDeleting ? 60 : 100);
-  }
+// Scroll event with debounce and element check for performance
+if (document.querySelectorAll('.fade-in').length > 0) {
+  window.addEventListener('scroll', debounce(scrollFadeIn));
 }
-
-type();
-
-// Auto-hide navbar on scroll
-let lastScrollTop = 0;
-const navbar = document.querySelector('.navbar');
-
-window.addEventListener('scroll', () => {
-  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  if (!navbar) return;
-  if (scrollTop > lastScrollTop) {
-    navbar.style.top = '-80px'; // Hide
-  } else {
-    navbar.style.top = '0'; // Show
-  }
-  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-});
-
-// Page loader animation
-const loader = document.querySelector('.loader');
-window.addEventListener('load', () => {
-  if (loader) {
-    loader.classList.add('fade-out');
-    setTimeout(() => loader.remove(), 600);
-  }
-});
