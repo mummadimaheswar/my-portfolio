@@ -1,149 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Maheswar Reddy Portfolio" />
-  <title>Mummadi Maheswar Reddy | AI Developer</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
-  <script defer src="script.js"></script>
-</head>
-<body class="auto-theme transition-theme">
-  <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0 0 18 9 9 0 1 1 0-18z"/></svg>
-  </button>
+import React from "react";
+import "../assets/css/home.css";
 
-  <header class="hero-section">
-    <div class="hero-content fade-in">
-      <img src="1000006231.jpg" alt="Mummadi Maheswar Reddy" class="profile-image" />
-        <!-- Profile Image -->
-<div class="profile-image fade-in">
-  <img src="1000006231.jpg" alt="Profile Picture" style="width: 200px; height: auto; border-radius: 12px;">
-</div>
+const Portfolio = () => {
+  return (
+    <div className="portfolio-container">
       <h1>Mummadi Maheswar Reddy</h1>
-      <p>📧 22b61a66a4@nmrec.edu.in | 📞 +91 6303863875 | 📍 Hyderabad</p>
-      <a href="#projects" class="button hover-effect">View Projects</a>
+      <p>📧 Email: 22b61a66a4@nmrec.edu.in | 📞 Phone: +91 6303863875 | 📍 Location: Hyderabad</p>
+
+      <section>
+        <h2>Career Objective</h2>
+        <p>I am passionate about using Artificial Intelligence (AI) to solve complex challenges, optimize business processes, and enhance user experiences. My goal is to become an AI Developer by mastering machine learning, deep learning, and NLP. I strive to build intelligent applications that drive innovation and efficiency across industries.</p>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <ul>
+          <li><strong>B.Tech in Computer Science & Engineering</strong> - Nalla Malla Reddy Engineering College (2022 - 2026)</li>
+          <li><strong>Senior Secondary Education (XII)</strong> - Narayana Junior College, Kadapa - 90% (2022)</li>
+          <li><strong>Secondary Education (X)</strong> - Bhashyam High School, Kadapa - 98.3% (2020)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Certifications & Training</h2>
+        <ul>
+          <li>AI Developer - IBM (Aug 2024 - Present)</li>
+          <li>Generative AI with Vertex AI - Google (Aug 2024)</li>
+          <li>NLP - Microsoft (Jul - Aug 2024)</li>
+          <li>Computer Vision in Azure - Microsoft (Jul 2024)</li>
+          <li>Azure Machine Learning - Microsoft (Jul 2024)</li>
+          <li>AI on Azure - Microsoft (Jun 2024)</li>
+          <li>AI Essentials - Google (Jun 2024)</li>
+          <li>Python for Data Science - NPTEL (Jan - Mar 2024)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Projects</h2>
+        <ul>
+          <li><strong>Image Captioning using Gradio</strong> - Built an AI model that generates captions for images (Jan 2025).</li>
+          <li><strong>Chatbot with Open Source LLMs</strong> - Developed an NLP-based chatbot using Hugging Face (Dec 2024 - Jan 2025).</li>
+          <li><strong>Sentiment Analysis</strong> - Created a machine learning model to classify sentiment in text (Nov 2024).</li>
+          <li><strong>Emotion Detector</strong> - Used deep learning and NLP to detect emotions from text (Nov 2024).</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Technical Skills</h2>
+        <ul>
+          <li>Python, HTML, JavaScript, CSS</li>
+          <li>Machine Learning, Deep Learning</li>
+          <li>NLP, Computer Vision</li>
+          <li>AI Model Development</li>
+          <li>Cloud: Azure, Google Cloud</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Portfolio</h2>
+        <p>🔗 <a href="http://mummadimaheswar.github.io/my-portfolio/" target="_blank">mummadimaheswar.github.io/my-portfolio</a></p>
+      </section>
     </div>
-  </header>
-<section id="objection">
-  <h2>Objection</h2>
-  <!-- Content -->
-</section>
+  );
+};
 
-<section id="certification">
-  <h2>Certification</h2>
-  <!-- Content -->
-</section>
-
-<section id="projects">
-  <h2>Projects</h2>
-  <!-- Content -->
-</section>
-
-<section id="skills">
-  <h2>Skills</h2>
-  <!-- Content -->
-</section>
-
-<section id="contact">
-  <h2>Contact</h2>
-  <!-- Content -->
-</section>
-
-  <nav>
-    <a href="#objective">Objective</a>
-    <a href="#education">Education</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section id="objective" class="fade-in">
-    <h2>Career Objective</h2>
-    <p>Artificial Intelligence (AI) is transforming industries, and I am passionate about leveraging AI to solve complex challenges, optimize business processes, and enhance user experiences. My ultimate goal is to become an AI Developer, contributing to the field by designing intelligent systems and implementing innovative solutions. Through continuous learning and hands-on experience, I aim to master AI technologies, develop scalable AI models, and apply them effectively in real-world applications.</p>
-    <p>With expertise in machine learning, deep learning, and natural language processing (NLP), I am committed to exploring the potential of AI in various domains. Whether it is optimizing workflows, creating AI-driven automation, or developing conversational AI systems, I thrive on building intelligent applications that improve efficiency and user engagement.</p>
-  </section>
-
-  <section id="education" class="fade-in">
-    <h2>Education</h2>
-    <ul>
-      <li><strong>Bachelor of Technology (B.Tech), Computer Science & Engineering</strong><br>📍 Nalla Malla Reddy Engineering College | 2022 - 2026</li>
-      <li><strong>Senior Secondary Education (XII), Science Stream</strong><br>📍 Narayana Junior College, Kadapa | 2022 | 📊 90.00%</li>
-      <li><strong>Secondary Education (X)</strong><br>📍 Bhashyam High School, Kadapa | 2020 | 📊 98.30%</li>
-    </ul>
-  </section>
-
-  <section id="certifications" class="fade-in">
-    <h2>Certifications & Training</h2>
-    <ul>
-      <li>AI Developer - IBM (Aug 2024 - Present)</li>
-      <li>Generative AI with Vertex AI - Google (Aug 2024)</li>
-      <li>Natural Language Processing (NLP) - Microsoft (Jul 2024 - Aug 2024)</li>
-      <li>Computer Vision in Microsoft Azure - Microsoft (Jul 2024)</li>
-      <li>Microsoft Azure Machine Learning - Microsoft (Jul 2024)</li>
-      <li>Artificial Intelligence on Microsoft Azure - Microsoft (Jun 2024)</li>
-      <li>AI Essentials - Google (Jun 2024)</li>
-      <li>Python for Data Science - NPTEL (Jan 2024 - Mar 2024)</li>
-    </ul>
-  </section>
-
-
-
-<!-- Projects Section -->
-<section id="projects" class="fade-in">
-  <h2>Projects</h2>
-  <ul>
-    <li>
-      <strong>Image Captioning using Generative AI</strong><br>
-      Developed a model that analyzes an image and generates a suitable caption using NLP and vision techniques. Used deep learning frameworks to extract features and Gradio to create a user-friendly interface.
-    </li>
-    <li>
-      <strong>Simple Chatbot using Personal Data</strong><br>
-      Created a chatbot that provides personal information (like name, hobbies, education) based on user input. Integrated open-source LLMs via Hugging Face to manage natural conversations.
-    </li>
-    <li>
-      <strong>Sentiment Analysis</strong><br>
-      Built a text classification model that analyzes sentiments (positive, neutral, negative) in sentences or product reviews. Utilized NLP libraries and visualization tools for insights.
-    </li>
-    <li>
-      <strong>Emotion Detector</strong><br>
-      Designed a tool to detect human emotions such as joy, anger, sadness, etc., from textual input. Helpful for mental health tracking and smart feedback systems.
-    </li>
-    <li>
-      <strong>AI Career Coach</strong><br>
-      An AI assistant that guides students or job seekers by answering queries related to AI career paths, skills to learn, job roles, etc. Integrated with real-time data and tailored responses.
-    </li>
-  </ul>
-</section>
-
-<!-- Skills Section -->
-<section id="skills" class="fade-in">
-  <h2>Technical Skills</h2>
-  <ul>
-    <li><strong>Programming Languages:</strong> Python, Java, C++, HTML, CSS, JavaScript</li>
-    <li><strong>Frameworks:</strong> TensorFlow, PyTorch, Scikit-learn</li>
-    <li><strong>Tools & Libraries:</strong> Gradio, OpenCV, Hugging Face Transformers</li>
-    <li><strong>Platforms:</strong> Google Colab, VS Code, Jupyter Notebook</li>
-    <li><strong>Cloud:</strong> Microsoft Azure, Google Cloud (Vertex AI)</li>
-    <li><strong>Version Control:</strong> Git, GitHub</li>
-  </ul>
-</section>
-
-
-  <section id="contact" class="fade-in">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:22b61a66a4@nmrec.edu.in">22b61a66a4@nmrec.edu.in</a><br>
-    Phone: +91 6303863875<br>
-    Location: Hyderabad</p>
-    <p>Portfolio: <a href="http://mummadimaheswar.github.io/my-portfolio/" target="_blank">mummadimaheswar.github.io/my-portfolio</a></p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Mummadi Maheswar Reddy. All rights reserved.</p>
-    <p>Inspired by <a href="https://aksh-ai.com/" target="_blank">Aksh's Portfolio</a></p>
-  </footer>
-</body>
-</html>
-
+export default Portfolio;
