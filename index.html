@@ -1,67 +1,169 @@
-import React from "react";
-import "../assets/css/home.css";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maheswar Reddy | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            background-color: #f0f4f8; /* light grey */
+            color: #1e3a8a; /* light blue text */
+            font-family: Arial, sans-serif;
+        }
 
-const Portfolio = () => {
-  return (
-    <div className="portfolio-container">
-      <h1>Mummadi Maheswar Reddy</h1>
-      <p>📧 Email: 22b61a66a4@nmrec.edu.in | 📞 Phone: +91 6303863875 | 📍 Location: Hyderabad</p>
+        header, footer {
+            background-color: #dbeafe; /* light blue */
+            color: #1e3a8a;
+            padding: 20px 0;
+            text-align: center;
+        }
 
-      <section>
-        <h2>Career Objective</h2>
-        <p>I am passionate about using Artificial Intelligence (AI) to solve complex challenges, optimize business processes, and enhance user experiences. My goal is to become an AI Developer by mastering machine learning, deep learning, and NLP. I strive to build intelligent applications that drive innovation and efficiency across industries.</p>
-      </section>
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
 
-      <section>
-        <h2>Education</h2>
-        <ul>
-          <li><strong>B.Tech in Computer Science & Engineering</strong> - Nalla Malla Reddy Engineering College (2022 - 2026)</li>
-          <li><strong>Senior Secondary Education (XII)</strong> - Narayana Junior College, Kadapa - 90% (2022)</li>
-          <li><strong>Secondary Education (X)</strong> - Bhashyam High School, Kadapa - 98.3% (2020)</li>
-        </ul>
-      </section>
+        nav ul li {
+            margin: 0 15px;
+        }
 
-      <section>
-        <h2>Certifications & Training</h2>
-        <ul>
-          <li>AI Developer - IBM (Aug 2024 - Present)</li>
-          <li>Generative AI with Vertex AI - Google (Aug 2024)</li>
-          <li>NLP - Microsoft (Jul - Aug 2024)</li>
-          <li>Computer Vision in Azure - Microsoft (Jul 2024)</li>
-          <li>Azure Machine Learning - Microsoft (Jul 2024)</li>
-          <li>AI on Azure - Microsoft (Jun 2024)</li>
-          <li>AI Essentials - Google (Jun 2024)</li>
-          <li>Python for Data Science - NPTEL (Jan - Mar 2024)</li>
-        </ul>
-      </section>
+        nav ul li a {
+            color: #1e3a8a;
+            text-decoration: none;
+        }
 
-      <section>
-        <h2>Projects</h2>
-        <ul>
-          <li><strong>Image Captioning using Gradio</strong> - Built an AI model that generates captions for images (Jan 2025).</li>
-          <li><strong>Chatbot with Open Source LLMs</strong> - Developed an NLP-based chatbot using Hugging Face (Dec 2024 - Jan 2025).</li>
-          <li><strong>Sentiment Analysis</strong> - Created a machine learning model to classify sentiment in text (Nov 2024).</li>
-          <li><strong>Emotion Detector</strong> - Used deep learning and NLP to detect emotions from text (Nov 2024).</li>
-        </ul>
-      </section>
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
 
-      <section>
-        <h2>Technical Skills</h2>
-        <ul>
-          <li>Python, HTML, JavaScript, CSS</li>
-          <li>Machine Learning, Deep Learning</li>
-          <li>NLP, Computer Vision</li>
-          <li>AI Model Development</li>
-          <li>Cloud: Azure, Google Cloud</li>
-        </ul>
-      </section>
+        h1, h2, h3 {
+            color: #1e3a8a;
+        }
 
-      <section>
-        <h2>Portfolio</h2>
-        <p>🔗 <a href="http://mummadimaheswar.github.io/my-portfolio/" target="_blank">mummadimaheswar.github.io/my-portfolio</a></p>
-      </section>
-    </div>
-  );
-};
+        .section {
+            background-color: #ffffff;
+            margin-bottom: 40px;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
 
-export default Portfolio;
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #2563eb;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Mummadi Maheswar Reddy</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Artificial Intelligence (AI) is transforming industries, and I am passionate about leveraging AI to solve complex challenges, optimize business processes, and enhance user experiences. My ultimate goal is to become an AI Developer, contributing to the field by designing intelligent systems and implementing innovative solutions. Through continuous learning and hands-on experience, I aim to master AI technologies, develop scalable AI models, and apply them effectively in real-world applications.</p>
+            <p>With expertise in machine learning, deep learning, and natural language processing (NLP), I am committed to exploring the potential of AI in various domains. Whether it is optimizing workflows, creating AI-driven automation, or developing conversational AI systems, I thrive on building intelligent applications that improve efficiency and user engagement.</p>
+        </div>
+    </section>
+
+    <section id="education" class="section">
+        <div class="container">
+            <h2>Education</h2>
+            <ul>
+                <li><strong>B.Tech in Computer Science & Engineering</strong>, Nalla Malla Reddy Engineering College (2022 - 2026)</li>
+                <li><strong>Senior Secondary Education (XII)</strong>, Narayana Junior College, Kadapa - 90% (2022)</li>
+                <li><strong>Secondary Education (X)</strong>, Bhashyam High School, Kadapa - 98.3% (2020)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="certifications" class="section">
+        <div class="container">
+            <h2>Certifications & Training</h2>
+            <ul>
+                <li>AI Developer - IBM (Aug 2024 - Present)</li>
+                <li>Generative AI with Vertex AI - Google (Aug 2024)</li>
+                <li>Natural Language Processing (NLP) - Microsoft (Jul - Aug 2024)</li>
+                <li>Computer Vision in Microsoft Azure - Microsoft (Jul 2024)</li>
+                <li>Microsoft Azure Machine Learning - Microsoft (Jul 2024)</li>
+                <li>Artificial Intelligence on Microsoft Azure - Microsoft (Jun 2024)</li>
+                <li>AI Essentials - Google (Jun 2024)</li>
+                <li>Python for Data Science - NPTEL (Jan - Mar 2024)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2>Skills</h2>
+            <ul>
+                <li>Python, JavaScript, HTML & CSS</li>
+                <li>Machine Learning & Deep Learning</li>
+                <li>Natural Language Processing (NLP)</li>
+                <li>Computer Vision</li>
+                <li>AI Model Development</li>
+                <li>Cloud Computing (Azure, Google Cloud)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Image Captioning using Gradio (Jan 2025)</h3>
+                <p>Developed an AI-powered image captioning system using deep learning models. Implemented a user-friendly interface with Gradio to generate descriptive captions for images. Improved accessibility, storytelling, and content creation using AI-driven creativity.</p>
+            </div>
+            <div class="project">
+                <h3>Simple Chatbot with Open Source LLMs (Dec 2024 - Jan 2025)</h3>
+                <p>Built a chatbot using open-source large language models (LLMs) from Hugging Face. Integrated the chatbot with Python-based NLP pipelines for interactive conversations. Designed a conversational AI interface capable of answering user queries efficiently.</p>
+            </div>
+            <div class="project">
+                <h3>Sentiment Analysis (Nov 2024)</h3>
+                <p>Developed a sentiment analysis model to analyze text-based emotions. Applied machine learning techniques to classify sentiments (positive, negative, neutral). Helped businesses improve customer service and decision-making based on sentiment insights.</p>
+            </div>
+            <div class="project">
+                <h3>Emotion Detector (Nov 2024)</h3>
+                <p>Built an AI-powered emotion detection system to analyze user emotions in text data. Applied NLP and deep learning techniques to improve communication and user engagement. Created an intelligent system that can be used for mental health support and user feedback analysis.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Email:mummadumahesh12@gmail.com</p>
+            <p>Phone: +91 6303863875</p>
+            <p>Location: Hyderabad</p>
+            <p>GitHub: <a href="https://github.com/mummadimaheswar" target="_blank">github.com/mummadimaheswar</a></p>
+            <p>Portfolio: <a href="http://mummadimaheswar.github.io/my-portfolio/" target="_blank">mummadimaheswar.github.io/my-portfolio</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Mummadi Maheswar Reddy | AI Developer</p>
+    </footer>
+</body>
+</html>
